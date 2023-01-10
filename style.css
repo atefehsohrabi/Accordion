@@ -1,0 +1,73 @@
+body {
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to bottom right, #114357 60%, #f29492);
+    line-height: 1.6;
+}
+
+.collapse-content {
+    width: 50vh;
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    margin: auto;
+ }
+
+.collapse {
+    background: #fff;
+}
+
+.collapse a {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 0.9rem 1.8rem;
+    display: block;
+    position: relative;
+    text-decoration: none;
+}
+
+.collapse a.instagram {
+    background-color: #db2e7d;
+}
+
+.collapse a.twitter {
+    background-color: #2e79db;
+}
+
+.collapse a.Dribble {
+    background-color: #57595c;
+}
+
+.collapse a.Youtube {
+    background-color: #f04920;
+}
+
+.content {
+    max-height: 0em;
+    transition: 0.3s linear 0s;
+    overflow: hidden;
+}
+
+.collapse a:before {
+    content: "";
+    border-top: 7px solid #fff;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    position: absolute;
+    top: 25px;
+    right: 30px;
+}
+
+.collapse.open .content {
+    max-height: 15em;
+}
+
+.collaps:target a::before {
+     transform: rotate(-90deg);
+}
+
+.inner-content {
+    padding: 1.8rem;
+}
